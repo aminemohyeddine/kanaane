@@ -1,0 +1,192 @@
+{
+  "HomePage": {
+    "welcomeText": "Bienvenue chez",
+    "nos-services": "Nos Services",
+    "title": "KANAANE Auto Services",
+    "servicesTitle": "Découvrez nos services",
+    "servicesIntro": "Chez KANAANE Auto Services, nous proposons des services complets de Diagnostic auto, d’installation d’accessoires (CarPlay, caméras, capteurs), et de distribution de matériel auto pour renforcer la sécurité et le confort de votre véhicule.",
+    "buttonText": "Voir tous les services",
+    "services": {
+      "keyFix": {
+        "title": "🔧 Réparation de clés de voiture",
+        "desc": "Réparation et remise en état des clés endommagées ou défectueuses."
+      },
+      "windowClose": {
+        "title": "⏫ Fermeture automatique des fenêtres",
+        "desc": "Sécurité dès la fermeture de la voiture."
+      },
+      "camera": {
+        "title": "📷 Installation de caméras et capteurs",
+        "desc": "Pour une conduite sûre et un stationnement optimisé."
+      },
+      "carplay": {
+        "title": "🖥️ Écran multimédia avec CarPlay",
+        "desc": "Tableau de bord moderne et connecté."
+      },
+      "fap": {
+        "title": "🛠️ Entretien du filtre à particules (FAP)",
+        "desc": "Nettoyage et maintenance pour une performance optimale."
+      },
+      "ugir": {
+        "title": "⚙️ Adaptation UGR et UGIR",
+        "desc": "Ajustement des systèmes électroniques pour votre véhicule."
+      },
+      "adblue": {
+        "title": "💧 Entretien du système AdBlue",
+        "desc": "Services dédiés à la réduction des émissions polluantes."
+      },
+      "crashAirbag": {
+        "title": "🛡️ Réparation des airbags (Crash Airbag)",
+        "desc": "Diagnostic et réparation des systèmes de sécurité essentiels."
+      },
+      "electronicAuto": {
+        "title": "🔌 Maintenance électronique automobile",
+        "desc": "Diagnostic et réparation des pannes électroniques diverses."
+      },
+      "vents": {
+        "title": "🌬️ Entretien des bouches d’aération",
+        "desc": "Nettoyage et réglage du système de ventilation pour plus de confort."
+      },
+      "boitierElectroniqueOccasion": {
+        "title": "📦 Vente et rénovation de boîtiers électroniques d’occasion",
+        "desc": "Boîtiers de qualité à prix abordables."
+      },
+      "carcasesCles": {
+        "title": "🔑 Coques de clés de voiture",
+        "desc": "Fourniture de coques de rechange pour clés endommagées."
+      },
+      "centraliseVoiture": {
+        "title": "🚘 Installation et maintenance du système de centralisation",
+        "desc": "Contrôle complet de l’ouverture et fermeture des portes."
+      },
+      "bcmBci": {
+        "title": "📟 Entretien des modules BCM et BCI",
+        "desc": "Diagnostic et programmation des unités de contrôle électronique."
+      },
+      "ech": {
+        "title": "♻️ Entretien des systèmes de recyclage (ECH)",
+        "desc": "Optimisation des performances des systèmes de recyclage des gaz."
+      },
+      "calculateurAuto": {
+        "title": "🖥️ Maintenance du calculateur automobile",
+        "desc": "Diagnostic et résolution des problèmes de l’unité de contrôle électronique."
+      }
+    },
+    "AboutUs": {
+      "title": "À propos de nous",
+      "content": "Chez Kanaane Auto Services, nous sommes spécialisés dans le diagnostic électronique automobile, la maintenance AdBlue, ainsi que l’installation d’accessoires auto comme CarPlay, UGR et autres systèmes connectés.<br /><br />Nous intervenons également sur les modules électroniques tels que BCM et BCI, assurant la sécurité, la performance et la personnalisation de votre véhicule.<br /><br />En plus de nos services techniques, nous proposons la vente et la distribution de matériel électronique et d’accessoires automobiles adaptés à toutes les marques."
+    },
+    "reviews": {
+      "title": "Ce que disent nos clients",
+      "fromWhatsapp": "* Ces avis sont extraits de messages WhatsApp"
+    }
+  },
+  "header": {
+    "menu": "menu",
+    "title": "KANAANE Auto Services",
+    "accueil": "Accueil",
+    "nos-services": "Nos Services",
+    "location": "Localisation",
+    "contact": "Contact"
+  },
+  "whatsappContact": {
+    "messageToSend": "Salut ! J’ai une question concernant vos services",
+    "preferWhatsApp": "Vous préférez WhatsApp ?",
+    "chatWithUs": "Discutez directement avec nous sur WhatsApp pour des réponses rapides à vos questions. Notre équipe est disponible pendant les heures d'ouverture pour vous aider.",
+    "chatOnWhatsApp": "Discuter sur WhatsApp",
+    "businessHours": "Lun-Sam : 9h-19h",
+    "whyUseWhatsApp": "Pourquoi utiliser WhatsApp ?",
+    "instantResponses": "Réponses instantanées pendant les heures d'ouverture",
+    "sharePhotos": "Partagez facilement des photos de vos problèmes de clé",
+    "quickQuotes": "Obtenez rapidement des devis pour les services"
+  },
+  "contactusForm": {
+    "title": "Envoyez-nous un message",
+    "subtitle": "Vous avez un problème technique ? Vous souhaitez nous envoyer un retour ? Faites-le nous savoir.",
+    "statusSuccess": "Message envoyé avec succès ! Nous répondrons dans les 24 heures.",
+    "statusError": "Échec de l'envoi du message. Veuillez réessayer ou nous envoyer un e-mail directement.",
+    "labelName": "Votre nom*",
+    "placeholderName": "Nom",
+    "labelEmail": "Votre e-mail*",
+    "placeholderEmail": "exemple@exemple.com",
+    "labelNumber": "Numéro de téléphone",
+    "placeholderNumber": "06 XX XX XX XX",
+    "labelMessage": "Votre message*",
+    "placeholderMessage": "Votre message ici...",
+    "submitButton": "Envoyer le message",
+    "sending": "Envoi en cours..."
+  },
+  "locationPage": {
+    "contactAndLocation": "Emplacement & Contact",
+    "location": "hay sadri - rue 66 - 20670 - CASABLANCA (à coté de collège ABDELLEH IBN YASSINE)",
+    "title": "KANAANE Auto Services"
+  },
+  "our-services": {
+    "ourServices": "NOS SERVICES",
+    "contactUs": "Contactez-nous",
+    "headline": "Expertise en Diagnostic auto, installation d’accessoires et distribution de matériel automobile à Casablanca.",
+    "subtext": "Nous réalisons le Diagnostic auto, l’installation d’accessoires auto (comme CarPlay, caméras, capteurs), et la distribution de matériel automobile — tout cela sous un même toit à Casablanca !",
+
+    "cardTitleForProgramming": "Réparation de clés automobiles",
+    "cardDescForProgramming": "Réparation et remise en état des clés abîmées ou défectueuses pour garantir leur bon fonctionnement.",
+
+    "cardTitleForCarOpen": "Ouverture de voiture en cas de perte ou clé enfermée",
+    "cardDescForCarOpen": "Vous avez verrouillé votre voiture avec la clé à l’intérieur ? Nous intervenons rapidement et sans dommage pour ouvrir votre véhicule.",
+
+    "cardTitleWindowClose": "Fermeture automatique des vitres après verrouillage",
+    "cardDescWindowClose": "Nos systèmes assurent la fermeture automatique des vitres dès que vous verrouillez votre voiture, pour plus de sécurité et de confort.",
+
+    "cardTitleForCamera": "Installation de caméras et détecteurs de distance",
+    "cardDescForCamera": "Installation professionnelle de caméras et capteurs pour une meilleure sécurité et gestion du stationnement.",
+
+    "cardTitleCarplay": "Écran multimédia avec CarPlay",
+    "cardDescCarplay": "Tableau de bord moderne et connecté pour une expérience de conduite améliorée.",
+
+    "cardTitleFap": "Entretien du filtre à particules (FAP)",
+    "cardDescFap": "Nettoyage et maintenance du filtre à particules pour une performance optimale et moins de pollution.",
+
+    "cardTitleUgir": "Adaptation UGR et UGIR",
+    "cardDescUgir": "Ajustement et adaptation des systèmes électroniques spécifiques à votre véhicule.",
+
+    "cardTitleAdblue": "Entretien du système AdBlue",
+    "cardDescAdblue": "Services dédiés à la maintenance du système AdBlue pour réduire les émissions polluantes.",
+
+    "cardTitleCrashAirbag": "Réparation des airbags (Crash Airbag)",
+    "cardDescCrashAirbag": "Diagnostic et réparation des systèmes de sécurité essentiels pour votre protection.",
+
+    "cardTitleElectronicAuto": "Maintenance électronique automobile",
+    "cardDescElectronicAuto": "Diagnostic et réparation des pannes électroniques diverses dans votre véhicule.",
+
+    "cardTitleVents": "Entretien des bouches d’aération",
+    "cardDescVents": "Nettoyage et réglage du système de ventilation pour plus de confort et une meilleure circulation d’air.",
+
+    "cardTitleBoitierElectroniqueOccasion": "Vente et rénovation de boîtiers électroniques d’occasion",
+    "cardDescBoitierElectroniqueOccasion": "Boîtiers électroniques de qualité, remis à neuf et proposés à des prix compétitifs.",
+
+    "cardTitleCarcasesCles": "Coques de clés de voiture",
+    "cardDescCarcasesCles": "Fourniture de coques de remplacement pour vos clés abîmées ou usées.",
+
+    "cardTitleCentraliseVoiture": "Installation et maintenance du système de centralisation",
+    "cardDescCentraliseVoiture": "Contrôle complet et fiable de l’ouverture et fermeture des portes de votre voiture.",
+
+    "cardTitleBcmBci": "Entretien des modules BCM et BCI",
+    "cardDescBcmBci": "Diagnostic, réparation et programmation des unités de contrôle électronique du véhicule.",
+
+    "cardTitleEch": "Entretien des systèmes de recyclage (ECH)",
+    "cardDescEch": "Optimisation et maintenance des systèmes de recyclage des gaz d’échappement pour une meilleure performance.",
+
+    "cardTitleCalculateurAuto": "Maintenance du calculateur automobile",
+    "cardDescCalculateurAuto": "Diagnostic complet et résolution des problèmes liés à l’unité de contrôle électronique du véhicule.",
+
+    "cardCallToAction": "En savoir plus"
+  },
+  "footer": {
+    "followUs": "Suivez-nous",
+    "importantLinks": "Liens importants",
+    "accueil": "Accueil",
+    "nos-services": "Nos Services",
+    "location": "Localisation",
+    "contact": "Contact",
+    "allRightReserved": "Tous droits réservés."
+  }
+}

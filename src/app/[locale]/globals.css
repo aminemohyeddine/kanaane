@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@config "../../../tailwind.config.js";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+html[lang='ar'] {
+  /* Your styles here */
+  direction: rtl;
+  font-family: 'Your Arabic Font', sans-serif;
+  /* other styles */
+}
+@font-face {
+  font-family: 'ABChanel Corpo Regular';
+  src: url('https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.eot') !important;
+  src: url('https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.svg#ABChanel Corpo Regular')
+      format('svg');
+}
+
+html.light {
+  background-color: white;
+}
+
+html.dark {
+  background-color: #111827;
+}
+
+.pattern-bg {
+  background-image: url("data:image/svg+xml,<svg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><g fill='%23000000' fill-opacity='0.9'><path d='M20 25h10v10H20z'/><path d='M15 30L5 40v10l10 10 10-10V40z'/><circle cx='10' cy='35' r='2'/><path d='M65 20l-5-5-5 5-5-5-5 5v10l5 5 5-5 5 5 5-5V20z'/><path d='M70 40h10v10H70z'/><path d='M75 45l-5 5v10l5 5 5-5V50z'/></g></svg>") !important;
+  background-size: 150px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pattern-bg {
+    background-image: url("data:image/svg+xml,<svg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><g fill='%23000000' fill-opacity='0.9'><path d='M20 25h10v10H20z'/><path d='M15 30L5 40v10l10 10 10-10V40z'/><circle cx='10' cy='35' r='2'/><path d='M65 20l-5-5-5 5-5-5-5 5v10l5 5 5-5 5 5 5-5V20z'/><path d='M70 40h10v10H70z'/><path d='M75 45l-5 5v10l5 5 5-5V50z'/></g></svg>") !important;
+  }
+}
+
+.dark .pattern-bg {
+  background-image: url("data:image/svg+xml,<svg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><g fill='%23000000' fill-opacity='0.9'><path d='M20 25h10v10H20z'/><path d='M15 30L5 40v10l10 10 10-10V40z'/><circle cx='10' cy='35' r='2'/><path d='M65 20l-5-5-5 5-5-5-5 5v10l5 5 5-5 5 5 5-5V20z'/><path d='M70 40h10v10H70z'/><path d='M75 45l-5 5v10l5 5 5-5V50z'/></g></svg>") !important;
+}

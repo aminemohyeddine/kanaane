@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.kanaane-auto-services.com
+
+# Sitemaps
+Sitemap: https://www.kanaane-auto-services.com/sitemap.xml

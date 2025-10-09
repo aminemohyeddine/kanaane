@@ -1,0 +1,189 @@
+{
+  "HomePage": {
+    "welcomeText": "مرحبا بكم في ",
+    "title": "KANAANE Auto Services",
+    "nos-services": "خدماتنا",
+    "servicesTitle": "اكتشف خدماتنا",
+    "servicesIntro": "في KANAANE Auto Services، نقدم خدمات شاملة تشمل التشخيص الإلكتروني، تركيب الإكسسوارات، وتوزيع معدات السيارات لتعزيز أمان وراحة سيارتك.",
+    "buttonText": "عرض جميع الخدمات",
+    "services": {
+      "keyFix": {
+        "title": "🔧 إصلاح مفاتيح السيارات",
+        "desc": "تصليح وإعادة تأهيل المفاتيح التالفة أو المعطلة."
+      },
+      "windowClose": {
+        "title": "⏫ إغلاق النوافذ تلقائيًا",
+        "desc": "الأمان فور قفل السيارة."
+      },
+      "camera": {
+        "title": "📷 Caméras & capteurs - تركيب كاميرات وأجهزة استشعار",
+        "desc": "لقيادة آمنة ومواقف محسنة."
+      },
+      "carplay": {
+        "title": "🖥️ CarPlay - شاشة متعددة الوسائط مع CarPlay",
+        "desc": "لوحة قيادة حديثة ومتّصلة."
+      },
+      "fap": {
+        "title": "🛠️ FAP - صيانة فلاتر الجسيمات (FAP)",
+        "desc": "تنظيف وصيانة فلتر الديزل لضمان الأداء الأمثل."
+      },
+      "ugir": {
+        "title": "⚙️ UGIR - تعديل UGR وUGIR",
+        "desc": "تكيف الأنظمة الإلكترونية لتناسب سيارتك."
+      },
+      "adblue": {
+        "title": "💧 AdBlue - صيانة نظام AdBlue",
+        "desc": "خدمات مخصصة للحفاظ على نظام تقليل الانبعاثات."
+      },
+      "crashAirbag": {
+        "title": "🛡️ Crash Airbag - إصلاح أعطال الوسائد الهوائية",
+        "desc": "فحص وإصلاح أعطال أنظمة الأمان الحيوية."
+      },
+      "electronicAuto": {
+        "title": "🔌 Électronique auto - صيانة الأجهزة الإلكترونية للسيارة",
+        "desc": "تشخيص وإصلاح الأعطال الإلكترونية المختلفة."
+      },
+      "vents": {
+        "title": "🌬️ Vents - صيانة فتحات التهوية",
+        "desc": "تنظيف وضبط نظام التهوية لمزيد من الراحة."
+      },
+      "boitierElectroniqueOccasion": {
+        "title": "📦 Boîtier électronique occasion - بيع وتجديد وحدات إلكترونية مستعملة",
+        "desc": "وحدات إلكترونية بجودة عالية وبأسعار مناسبة."
+      },
+      "carcasesCles": {
+        "title": "🔑 Carcasses clés - هياكل مفاتيح السيارات",
+        "desc": "توفير هياكل مفاتيح بديلة لمفاتيحك التالفة."
+      },
+      "centraliseVoiture": {
+        "title": "🚘 Centralise - تركيب وصيانة نظام مركزية السيارة",
+        "desc": "تحكم متكامل في فتح وإغلاق الأبواب."
+      },
+      "bcmBci": {
+        "title": "📟 BCM & BCI - صيانة وحدات BCM و BCI",
+        "desc": "فحص وبرمجة وحدات التحكم الإلكترونية."
+      },
+      "ech": {
+        "title": "♻️ Ech - صيانة أنظمة إعادة التدوير",
+        "desc": "تحسين أداء أنظمة إعادة تدوير الغازات."
+      },
+      "calculateurAuto": {
+        "title": "🖥️ Calculateur auto - صيانة وحل مشاكل الحاسوب المركزي",
+        "desc": "تشخيص وحل مشاكل وحدة التحكم الإلكترونية للسيارة."
+      }
+    },
+
+    "AboutUs": {
+      "title": "من نحن",
+      "content": "في KANAANE Auto Services، نحن متخصصون في التشخيص الإلكتروني للسيارات، صيانة نظام AdBlue، وتركيب الإكسسوارات مثل CarPlay وتعديل UGR. فريقنا ذو خبرة عالية يقدم حلولاً متكاملة لتعزيز أمان وراحة سيارتكم. كما نقوم بتعديل وبرمجة أنظمة BCM وBCI، ونوفر معدات إلكترونية متوافقة مع جميع ماركات السيارات. سواء كنتم بحاجة إلى تشخيص دقيق، تركيب أجهزة متقدمة، أو توزيع حلول إلكترونية للسيارات، نحن هنا لخدمتكم بأعلى جودة."
+    },
+    "reviews": {
+      "title": "ماذا يقول عملاؤنا",
+      "fromWhatsapp": "هذه المراجعات مأخوذة من رسائل واتساب*"
+    }
+  },
+  "header": {
+    "menu": "القائمة",
+    "title": "KANAANE Auto Services",
+    "accueil": "الرئيسية",
+    "nos-services": "خدماتنا",
+    "location": "موقعنا",
+    "contact": "اتصل بنا"
+  },
+  "whatsappContact": {
+    "messageToSend": "مرحبًا! لدي سؤال حول خدماتكم",
+    "preferWhatsApp": "هل تفضل الواتساب؟",
+    "chatWithUs": "تحدث معنا مباشرة على الواتساب للحصول على ردود سريعة على استفساراتك. فريقنا متوفر خلال ساعات العمل لمساعدتك.",
+    "chatOnWhatsApp": "الدردشة على الواتساب",
+    "businessHours": "الإثنين - السبت: من 9 صباحًا إلى 8 مساءً",
+    "whyUseWhatsApp": "لماذا تستخدم الواتساب؟",
+    "instantResponses": "ردود فورية خلال ساعات العمل",
+    "sharePhotos": "شارك صور مشكلات مفتاحك بسهولة",
+    "quickQuotes": "احصل على عروض أسعار سريعة للخدمات"
+  },
+  "contactusForm": {
+    "title": "أرسل لنا رسالة",
+    "subtitle": "هل تواجه مشكلة تقنية؟ أخبرنا.",
+    "statusSuccess": "تم إرسال الرسالة بنجاح! سنرد خلال 24 ساعة.",
+    "statusError": "فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى أو مراسلتنا عبر البريد الإلكتروني مباشرة.",
+    "labelName": "اسمك*",
+    "placeholderName": "اسمك",
+    "labelEmail": "بريدك الإلكتروني*",
+    "placeholderEmail": "exemple@example.com",
+    "labelNumber": "رقم الهاتف",
+    "placeholderNumber": "06 XX XX XX XX",
+    "labelMessage": "رسالتك*",
+    "placeholderMessage": "رسالتك هنا...",
+    "submitButton": "إرسال الرسالة",
+    "sending": "جاري الإرسال..."
+  },
+  "locationPage": {
+    "contactAndLocation": "عنواننا ووسائل الاتصال",
+    "location": "حي السدري - شارع 66 - 20670 - الدار البيضاء (بجانب اعدادية عبد الله ابن ياسين)",
+    "title": "KANAANE Auto Services"
+  },
+  "our-services": {
+    "ourServices": "خدماتنا",
+    "contactUs": "اتصل بنا",
+    "headline": "تشخيص إلكتروني احترافي، وتركيب ملحقات وإكسسوارات السيارات بجودة عالية",
+    "subtext": " نقوم بالتشخيص الإلكتروني، وتركيب أنظمة إغلاق النوافذ تلقائيًا، الكاميرات، وأنظمة الوسائط المتعددة مثل CarPlay والمزيد — كل ذلك تحت سقف واحد!",
+
+    "cardTitleForCarOpen": "فتح السيارة عند فقدان المفتاح أو إغلاقه داخلها",
+    "cardDescForCarOpen": "هل أغلقت سيارتك والمفتاح بداخلها؟ نحن نتدخل بسرعة وبدون ضرر لفتح سيارتك.",
+
+    "cardTitleWindowClose": "إغلاق النوافذ تلقائياً بعد القفل",
+    "cardDescWindowClose": "أنظمتنا تضمن إغلاق النوافذ تلقائياً بمجرد قفل سيارتك لمزيد من الأمان والراحة.",
+
+    "cardTitleForCamera": "تركيب الكاميرات وأجهزة الاستشعار",
+    "cardDescForCamera": "تركيب احترافي للكاميرات وأجهزة الاستشعار لتحسين الأمان وإدارة مواقف السيارات.",
+
+    "cardTitleCarplay": "شاشة متعددة الوسائط مع CarPlay",
+    "cardDescCarplay": "لوحة قيادة حديثة ومتصلة لتجربة قيادة محسنة.",
+
+    "cardTitleFap": "صيانة فلتر الجسيمات (FAP)",
+    "cardDescFap": "تنظيف وصيانة فلتر الجسيمات لتحسين الأداء وتقليل التلوث.",
+
+    "cardTitleUgir": "تكييف UGR و UGIR",
+    "cardDescUgir": "تعديل وتكييف الأنظمة الإلكترونية الخاصة بسيارتك.",
+
+    "cardTitleAdblue": "صيانة نظام AdBlue",
+    "cardDescAdblue": "خدمات صيانة لنظام AdBlue لتقليل الانبعاثات الضارة.",
+
+    "cardTitleCrashAirbag": "إصلاح أكياس الهواء (Crash Airbag)",
+    "cardDescCrashAirbag": "تشخيص وإصلاح أنظمة الأمان الأساسية لحمايتك.",
+
+    "cardTitleElectronicAuto": "صيانة الأنظمة الإلكترونية للسيارة",
+    "cardDescElectronicAuto": "تشخيص وإصلاح أعطال الأنظمة الإلكترونية المختلفة في سيارتك.",
+
+    "cardTitleVents": "صيانة فتحات التهوية",
+    "cardDescVents": "تنظيف وضبط نظام التهوية لراحة أفضل وتدفق هواء محسّن.",
+
+    "cardTitleBoitierElectroniqueOccasion": "بيع وتجديد وحدات إلكترونية مستعملة",
+    "cardDescBoitierElectroniqueOccasion": "وحدات إلكترونية عالية الجودة معاد تجديدها وبأسعار تنافسية.",
+
+    "cardTitleCarcasesCles": "أغطية مفاتيح السيارة",
+    "cardDescCarcasesCles": "توفير أغطية بديلة لمفاتيحك التالفة أو المهترئة.",
+
+    "cardTitleCentraliseVoiture": "تركيب وصيانة نظام القفل المركزي",
+    "cardDescCentraliseVoiture": "تحكم كامل وموثوق في فتح وإغلاق أبواب السيارة.",
+
+    "cardTitleBcmBci": "صيانة وحدات BCM و BCI",
+    "cardDescBcmBci": "تشخيص وإصلاح وبرمجة وحدات التحكم الإلكترونية في السيارة.",
+
+    "cardTitleEch": "صيانة أنظمة إعادة التدوير (ECH)",
+    "cardDescEch": "تحسين وصيانة أنظمة إعادة تدوير غازات العادم لأداء أفضل.",
+
+    "cardTitleCalculateurAuto": "صيانة وحدة التحكم الإلكترونية للسيارة",
+    "cardDescCalculateurAuto": "تشخيص شامل وحل مشاكل وحدة التحكم الإلكترونية في السيارة.",
+
+    "cardCallToAction": "المزيد من المعلومات"
+  },
+  "footer": {
+    "followUs": "تابعنا",
+    "importantLinks": "روابط مهمة",
+    "nos-services": "خدماتنا",
+    "location": "موقعنا",
+    "contact": "اتصل بنا",
+    "allRightReserved": "جميع الحقوق محفوظة."
+  }
+}
