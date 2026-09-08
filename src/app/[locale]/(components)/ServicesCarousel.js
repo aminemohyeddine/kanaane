@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import './servicesCarousel.scss';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export default function ServicesCarousel() {
@@ -24,8 +24,51 @@ export default function ServicesCarousel() {
   }, [breakpoint]);
 
   const t = useTranslations('HomePage');
+  const locale = useLocale();
 
   const services = [
+    {
+      key: 'keyProgramming',
+      color: 'text-sky-600 dark:text-sky-400',
+      title: t('services.keyProgramming.title'),
+      desc: t('services.keyProgramming.desc'),
+      imageUrl: '/images/pragramCar.jpg',
+    },
+    {
+      key: 'carOpen',
+      color: 'text-red-600 dark:text-red-400',
+      title: t('services.carOpen.title'),
+      desc: t('services.carOpen.desc'),
+      imageUrl: '/images/lostKeys.jpg',
+    },
+    {
+      key: 'keyFix',
+      color: 'text-amber-600 dark:text-amber-400',
+      title: t('services.keyFix.title'),
+      desc: t('services.keyFix.desc'),
+      imageUrl: '/images/fix-keys.jpg',
+    },
+    {
+      key: 'carcasesCles',
+      color: 'text-indigo-600 dark:text-indigo-400',
+      title: t('services.carcasesCles.title'),
+      desc: t('services.carcasesCles.desc'),
+      imageUrl: '/images/carcase.PNG',
+    },
+    {
+      key: 'windowClose',
+      color: 'text-emerald-600 dark:text-emerald-400',
+      title: t('services.windowClose.title'),
+      desc: t('services.windowClose.desc'),
+      imageUrl: '/images/close_windows.webp',
+    },
+    {
+      key: 'ugir',
+      color: 'text-cyan-600 dark:text-cyan-400',
+      title: t('services.ugir.title'),
+      desc: t('services.ugir.desc'),
+      imageUrl: '/images/electronic.jpg',
+    },
     {
       key: 'electronicAuto',
       color: 'text-teal-600 dark:text-teal-400',
@@ -97,22 +140,6 @@ export default function ServicesCarousel() {
       desc: t('services.centraliseVoiture.desc'),
       imageUrl: '/images/centralise.jpg',
     },
-
-    {
-      key: 'carplay',
-      color: 'text-purple-600 dark:text-purple-400',
-      title: t('services.carplay.title'),
-      desc: t('services.carplay.desc'),
-      imageUrl: '/images/carplay.avif',
-    },
-
-    {
-      key: 'camera',
-      color: 'text-yellow-600 dark:text-yellow-400',
-      title: t('services.camera.title'),
-      desc: t('services.camera.desc'),
-      imageUrl: '/images/camera-surveillance-voiture.jpg',
-    },
   ];
 
   const [swiperRef, setSwiperRef] = useState(null);
@@ -136,9 +163,9 @@ export default function ServicesCarousel() {
     <div className="relative isolate overflow-hidden rounded-2xl shadow-xl p-5 md:p-32 text-gray-800 dark:text-gray-200">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-100 via-white to-green-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 opacity-80 backdrop-blur-md rounded-2xl" />
 
-      <h2 className="text-3xl font-bold mb-14 text-center text-gray-900 dark:text-white font-abchanel">
+      <h1 className="text-3xl font-bold mb-14 text-center text-gray-900 dark:text-white font-abchanel">
         {t('servicesTitle')}
-      </h2>
+      </h1>
 
       <h3 className="mb-4 text-lg font-abchanel text-center">
         {t('servicesIntro')}
@@ -173,7 +200,7 @@ export default function ServicesCarousel() {
 
       <div className="mt-8 text-center mb-10">
         <Link
-          href="nos-services"
+          href={`/${locale}/nos-services`}
           className="inline-block px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors dark:bg-blue-500 dark:hover:bg-blue-400"
         >
           {t('buttonText')}

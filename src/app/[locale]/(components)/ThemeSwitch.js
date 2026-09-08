@@ -11,7 +11,15 @@ const ThemeSwitch = ({ isMobile }) => {
     setMounted(true);
   }, []);
 
-  if (!mounted) <div className="w-10 h-10"></div>;
+  if (!mounted) {
+    return (
+      <div
+        className={`${
+          isMobile ? 'absolute bottom-4 right-2' : 'relative top-[-5px]'
+        } w-10 h-10`}
+      />
+    );
+  }
 
   return (
     <button

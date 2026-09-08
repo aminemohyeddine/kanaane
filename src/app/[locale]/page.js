@@ -5,37 +5,65 @@ import ServicesCarousel from './(components)/ServicesCarousel';
 import CarBrandCarousel from './(components)/CarsCarousl';
 import ClientReviews from './(components)/ClientReviews';
 import FancySvgBackgroundPage from './(components)/FancyBg';
+import { SITE_URL, buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }) {
-  const locale = await params.locale;
+  const { locale } = await params;
   if (!['fr', 'ar'].includes(locale)) {
     notFound();
   }
 
-  return {
-    title:
-      locale === 'ar'
-        ? 'KANAANE Auto Services | تشخيص السيارات، تركيب وتوزيع لوازم ومعدات السيارات في الدار البيضاء – المغرب'
-        : 'KANAANE Auto Services | Diagnostic auto, installation et distribution d’accessoires auto à Casablanca – Maroc',
-    description:
-      locale === 'ar'
-        ? 'KANAANE Auto Services | مركز متخصص في تشخيص أعطال السيارات، تركيب لوازم السيارات، وتوزيع المعدات الإلكترونية وملحقات السيارات في الدار البيضاء و جميع أنحاء المغرب.'
-        : 'KANAANE Auto Services est votre spécialiste à Casablanca pour le diagnostic auto, l’installation d’accessoires auto, ainsi que la distribution de matériel électronique et d’équipements liés à l’automobile partout au Maroc.',
+  const title =
+    locale === 'ar'
+      ? 'سروري سيارات وتشخيص إلكتروني في الدار البيضاء | KANAANE Auto Services'
+      : 'Serrurier automobile & diagnostic auto à Casablanca | KANAANE Auto Services';
 
+  const description =
+    locale === 'ar'
+      ? 'سرورية السيارات في الدار البيضاء: برمجة وتكويد ونسخ مفاتيح السيارات وأجهزة التحكم عن بعد، صناعة مفاتيح جديدة، استبدال المفاتيح المفقودة وفتح السيارات. تشخيص إلكتروني، أنظمة منع التشغيل، AdBlue، حساسات، BCM/BCI، UGR وإكسسوارات السيارات.'
+      : 'Serrurier automobile à Casablanca : programmation de clés, codage de clés et télécommandes, duplication, création de nouvelles clés, remplacement de clés perdues et ouverture de voiture. Diagnostic automobile et électronique, antidémarrage, AdBlue, capteurs, BCM/BCI, UGR et accessoires auto.';
+
+  return {
+    title,
+    description,
+    keywords:
+      locale === 'ar'
+        ? [
+            'سروري سيارات الدار البيضاء',
+            'برمجة مفاتيح السيارات',
+            'نسخ مفاتيح السيارات',
+            'فتح السيارات',
+            'تشخيص السيارات',
+            'AdBlue',
+            'BCM BCI',
+            'UGR',
+            'إكسسوارات السيارات',
+          ]
+        : [
+            'serrurier Casablanca',
+            'serrurerie automobile Casablanca',
+            'programmation de clés automobiles',
+            'duplication de clés de voiture',
+            'remplacement de clés perdues',
+            'ouverture de voiture Casablanca',
+            'diagnostic automobile Casablanca',
+            'diagnostic électronique',
+            'antidémarrage',
+            'AdBlue',
+            'capteurs',
+            'BCM BCI',
+            'UGR',
+            'accessoires auto',
+          ],
     openGraph: {
-      title:
-        locale === 'ar'
-          ? 'KANAANE Auto Services | تشخيص السيارات، تركيب وتوزيع لوازم ومعدات السيارات في الدار البيضاء – المغرب'
-        : 'KANAANE Auto Services | Diagnostic auto, installation et distribution d’accessoires auto à Casablanca – Maroc',
-      description:
-        locale === 'ar'
-           ? 'KANAANE Auto Services | مركز متخصص في تشخيص أعطال السيارات، تركيب لوازم السيارات، وتوزيع المعدات الإلكترونية وملحقات السيارات في الدار البيضاء و جميع أنحاء المغرب.'
-        : 'KANAANE Auto Services est votre spécialiste à Casablanca pour le diagnostic auto, l’installation d’accessoires auto, ainsi que la distribution de matériel électronique et d’équipements liés à l’automobile partout au Maroc.',
-      siteName: locale === 'ar' ? 'KANAANE Auto Services' : 'KANAANE Auto Services',
+      type: 'website',
+      locale: locale === 'ar' ? 'ar_MA' : 'fr_MA',
+      url: `${SITE_URL}/${locale}`,
+      title,
+      description,
+      siteName: 'KANAANE Auto Services',
     },
-    alternates: {
-      canonical: 'https://www.kanaane-auto-services.com/contact',
-    },
+    alternates: buildAlternates(locale, ''),
   };
 }
 
@@ -62,10 +90,10 @@ export default function Home() {
           </video>
 
           <div className="absolute bottom-1/4 right-5 flex flex-col space-y-4 max-w-[90vw] md:max-w-fit text-right">
-            <h1 className="text-2xl md:text-5xl lg:text-7xl font-semibold font-abchanel text-white">
+            <div className="text-2xl md:text-5xl lg:text-7xl font-semibold font-abchanel text-white">
               <div className="text-2xl lg:text-7xl mb-2 lg:mb-5">{t('welcomeText')}</div>
               <div className="text-xl lg:text-6xl">{t('title')}</div>
-            </h1>
+            </div>
           </div>
         </div>
         <div className="pt-5 pb-5 bg-white">
@@ -79,14 +107,14 @@ export default function Home() {
         <div className="relative rounded-2xl shadow-xl p-5  text-gray-800 dark:text-gray-200 md:mx-20 md:my-10">
           <div className="absolute inset-0 -z-10 rounded-2xl" />
 
-          <h3 className="text-3xl font-bold mb-14 text-center text-gray-900 dark:text-white font-abchanel">
+          <h2 className="text-3xl font-bold mb-14 text-center text-gray-900 dark:text-white font-abchanel">
             {t('AboutUs.title')}
-          </h3>
+          </h2>
 
-          <h3
+          <div
             dangerouslySetInnerHTML={{ __html: t('AboutUs.content') }}
             className="mb-4 text-lg font-abchanel leading-relaxed max-w-3xl mx-auto center"
-          ></h3>
+          ></div>
         </div>
       </div>
     </>

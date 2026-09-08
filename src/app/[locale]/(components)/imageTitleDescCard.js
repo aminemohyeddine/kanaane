@@ -12,14 +12,14 @@ const ImageTitleDescCard = ({ shouldShow, ref, card }) => {
       <Image
         className="w-full h-52 object-cover rounded"
         src={card.image}
-        alt=""
+        alt={card.title}
         width={308}
         height={208}
       />
       <div className="p-5 flex justify-between flex-col">
-        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white font-abchanel text-center">
+        <h3 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white font-abchanel text-center">
           {card.title}
-        </h5>
+        </h3>
         <p className="mb-3 font-normal font-chanel text-gray-700 dark:text-gray-400">
           {card.description}
         </p>

@@ -2,50 +2,56 @@ import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import MapClientWrapper from '../(components)/MapWrapper';
+import Breadcrumbs from '../(components)/Breadcrumbs';
+import { SITE_URL, buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }) {
-  const locale = params.locale;
+  const { locale } = await params;
 
   if (!['fr', 'ar'].includes(locale)) {
     notFound();
   }
 
-  return {
-  title:
+  const title =
     locale === 'ar'
-      ? 'KANAANE Auto Services – موقع الورشة في الدار البيضاء'
-      : 'KANAANE Auto Services – Localisation - diagnostic auto casablanca - installation d’accessoires',
-  description:
-    locale === 'ar'
-      ? 'اكتشف موقع ورشة KANAANE Auto Services في الدار البيضاء. متخصصون في التشخيص الإلكتروني، تركيب الإكسسوارات وتوزيع معدات السيارات.'
-      : 'Trouvez notre garage KANAANE Auto Services à Casablanca. Spécialistes en diagnostic électronique, installation d’accessoires et distribution de matériel automobile.',
-  openGraph: {
-    title: locale === 'ar' ? 'KANAANE Auto Services' : 'KANAANE Auto Services',
-    description:
-      locale === 'ar'
-        ? 'اكتشف موقع الورشة وخدماتنا: التشخيص الإلكتروني، تركيب الإكسسوارات وتوزيع معدات السيارات في الدار البيضاء.'
-        : 'Découvrez notre localisation à Casablanca : diagnostic électronique, installation d’accessoires et distribution de matériel automobile.',
-    siteName: locale === 'ar' ? 'KANAANE Auto Services' : 'KANAANE Auto Services',
-  },
-  alternates: {
-    canonical: 'https://www.kanaane-auto-services.com/contact',
-  },
-};
+      ? 'موقعنا في الدار البيضاء — حي السدري | KANAANE Auto Services'
+      : 'Notre adresse à Casablanca — Hay Sadri | KANAANE Auto Services';
 
+  const description =
+    locale === 'ar'
+      ? 'ورشة KANAANE Auto Services: حي السدري، شارع 66، 20670 الدار البيضاء. سرورية السيارات، برمجة ونسخ المفاتيح، فتح السيارات، التشخيص الإلكتروني، AdBlue، BCM/BCI و UGR. ☎ +212 6 66 18 88 12'
+      : 'Atelier KANAANE Auto Services : Hay Sadri, rue 66, 20670 Casablanca. Serrurerie automobile, programmation et duplication de clés, ouverture de voiture, diagnostic électronique, AdBlue, BCM/BCI et UGR. ☎ +212 6 66 18 88 12';
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      locale: locale === 'ar' ? 'ar_MA' : 'fr_MA',
+      url: `${SITE_URL}/${locale}/location`,
+      title,
+      description,
+      siteName: 'KANAANE Auto Services',
+    },
+    alternates: buildAlternates(locale, '/location'),
+  };
 }
 
 export default async function Page({ params }) {
+  const { locale } = await params;
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: 'locationPage',
   });
 
   return (
-    <div className="w-full rounded-xl p-6 dark:text-gray-100 space-y-4 bg-transparent">
+    <>
+      <Breadcrumbs page="location" />
+      <div className="w-full rounded-xl p-6 dark:text-gray-100 space-y-4 bg-transparent">
       <div className="flex flex-col justify-center items-center">
-        <h2 className="min-w-fit text-3xl md:text-4xl font-bold text-gray-800 dark:text-white max-w-lg text-center mb-10 font-abchanel w-full">
+        <h1 className="min-w-fit text-3xl md:text-4xl font-bold text-gray-800 dark:text-white max-w-lg text-center mb-10 font-abchanel w-full">
           {t('contactAndLocation')}
-        </h2>
+        </h1>
 
         <div className=" w-fit flex mb-5">
           <Link
@@ -85,6 +91,7 @@ export default async function Page({ params }) {
           </p>{' '}
         </Link>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

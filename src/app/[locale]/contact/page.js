@@ -2,43 +2,48 @@ import React from 'react';
 import ContactUsForm from './form';
 import WhatsAppSection from './WhatsappSection';
 import { notFound } from 'next/navigation';
+import Breadcrumbs from '../(components)/Breadcrumbs';
+import { SITE_URL, buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }) {
-  const locale = await params.locale;
+  const { locale } = await params;
   if (!['fr', 'ar'].includes(locale)) {
     notFound();
   }
 
-  return {
-  title:
+  const title =
     locale === 'ar'
-      ? 'KANAANE Auto Services – تشخيص وتركيب وتوزيع لوازم السيارات في الدار البيضاء'
-      : 'KANAANE Auto Services – Diagnostic, installation et distribution d’accessoires auto à Casablanca',
-  description:
-    locale === 'ar'
-      ? 'KANAANE Auto Services متخصصة في التشخيص الإلكتروني للسيارات، تركيب الإكسسوارات، وتوزيع المعدات المرتبطة بالسيارات في الدار البيضاء، المغرب.'
-      : 'Kanaane Auto Services est spécialisée dans le diagnostic électronique, l’installation d’accessoires et la distribution de matériel automobile à Casablanca, Maroc.',
-  openGraph: {
-    title: locale === 'ar' ? 'KANAANE Auto Services' : 'KANAANE Auto Services',
-    description:
-      locale === 'ar'
-        ? 'تشخيص إلكتروني، تركيب إكسسوارات، وتوزيع معدات السيارات في الدار البيضاء، المغرب.'
-        : 'Diagnostic électronique, installation d’accessoires et distribution de matériel automobile à Casablanca, Maroc.',
-    siteName: locale === 'ar' ? 'KANAANE Auto Services' : 'KANAANE Auto Services',
-  },
+      ? 'اتصل بنا — سروري سيارات وتشخيص إلكتروني في الدار البيضاء'
+      : 'Contact — serrurier automobile et diagnostic auto à Casablanca';
 
-    alternates: {
-      canonical: 'https://www.kanaane-auto-services.com/',
+  const description =
+    locale === 'ar'
+      ? 'تواصل مع KANAANE Auto Services في الدار البيضاء عبر الهاتف أو واتساب: برمجة ونسخ مفاتيح السيارات، فتح السيارات عند فقدان المفاتيح، التشخيص الإلكتروني، AdBlue، BCM/BCI، UGR وإكسسوارات السيارات. ☎ +212 6 66 18 88 12'
+      : 'Contactez KANAANE Auto Services à Casablanca par téléphone ou WhatsApp : programmation et duplication de clés, ouverture de voiture en cas de perte de clés, diagnostic automobile, AdBlue, BCM/BCI, UGR et accessoires auto. ☎ +212 6 66 18 88 12';
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      locale: locale === 'ar' ? 'ar_MA' : 'fr_MA',
+      url: `${SITE_URL}/${locale}/contact`,
+      title,
+      description,
+      siteName: 'KANAANE Auto Services',
     },
+    alternates: buildAlternates(locale, '/contact'),
   };
 }
-const page = () => {
+
+const Page = () => {
   return (
     <>
+      <Breadcrumbs page="contact" />
       <WhatsAppSection />
       <ContactUsForm />
     </>
   );
 };
 
-export default page;
+export default Page;

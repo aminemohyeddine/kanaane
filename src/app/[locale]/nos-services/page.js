@@ -3,40 +3,80 @@ import { useTranslations } from 'next-intl';
 import ServicesCards from '../(components)/OurServicesCard';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Breadcrumbs from '../(components)/Breadcrumbs';
+import { SITE_URL, buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }) {
-  const locale = await params.locale;
+  const { locale } = await params;
   if (!['fr', 'ar'].includes(locale)) {
     notFound();
   }
 
- return {
-  title:
+  const title =
     locale === 'ar'
-      ? 'KANAANE Auto Services –  خدماتنا في الدار البيضاء - التشخيص الإلكتروني السيارات'
-      : 'KANAANE Auto Services – nos services casablanca - diagnostic auto - installation d’accessoires',
-  description:
+      ? 'خدماتنا: سرورية السيارات والتشخيص الإلكتروني في الدار البيضاء'
+      : 'Nos services : serrurerie automobile et diagnostic auto à Casablanca';
+
+  const description =
     locale === 'ar'
-      ? 'اكتشف موقع ورشة KANAANE Auto Services في الدار البيضاء. متخصصون في التشخيص الإلكتروني، تركيب الإكسسوارات وتوزيع معدات السيارات.'
-      : 'Trouvez notre garage KANAANE Auto Services à Casablanca. Spécialistes en diagnostic électronique, installation d’accessoires et distribution de matériel automobile.',
-  openGraph: {
-    title: locale === 'ar' ? 'KANAANE Auto Services' : 'KANAANE Auto Services',
-    description:
-      locale === 'ar'
-        ? 'اكتشف موقع الورشة وخدماتنا: التشخيص الإلكتروني، تركيب الإكسسوارات وتوزيع معدات السيارات في الدار البيضاء.'
-        : 'Découvrez notre localisation à Casablanca : diagnostic électronique, installation d’accessoires et distribution de matériel automobile.',
-    siteName: locale === 'ar' ? 'KANAANE Auto Services' : 'KANAANE Auto Services',
-  },
-  alternates: {
-    canonical: 'https://www.kanaane-auto-services.com/contact',
-  },
-};
+      ? 'جميع خدمات KANAANE Auto Services في الدار البيضاء: برمجة وتكويد ونسخ مفاتيح السيارات وأجهزة التحكم عن بعد، صناعة مفاتيح جديدة، استبدال المفاتيح المفقودة، فتح السيارات والأقفال، التشخيص الإلكتروني وأنظمة منع التشغيل، AdBlue، الحساسات، BCM/BCI، UGR وإكسسوارات السيارات.'
+      : 'Tous les services KANAANE Auto Services à Casablanca : programmation de clés automobiles, codage de clés et télécommandes, duplication, création de nouvelles clés, remplacement de clés perdues, ouverture de voitures et de serrures, diagnostic électronique et antidémarrage, AdBlue, capteurs, BCM/BCI, UGR et accessoires auto.';
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      locale: locale === 'ar' ? 'ar_MA' : 'fr_MA',
+      url: `${SITE_URL}/${locale}/nos-services`,
+      title,
+      description,
+      siteName: 'KANAANE Auto Services',
+    },
+    alternates: buildAlternates(locale, '/nos-services'),
+  };
 }
 
-const page = () => {
+const Page = () => {
   const t = useTranslations('our-services');
 
   const OurServicesCards = [
+    {
+      image: '/images/pragramCar.jpg',
+      title: t('cardTitleForProgramming'),
+      description: t('cardDescForProgramming'),
+      callToAction: t('cardCallToAction'),
+    },
+    {
+      image: '/images/lostKeys.jpg',
+      title: t('cardTitleForCarOpen'),
+      description: t('cardDescForCarOpen'),
+      callToAction: t('cardCallToAction'),
+    },
+    {
+      image: '/images/fix-keys.jpg',
+      title: t('cardTitleKeyRepair'),
+      description: t('cardDescKeyRepair'),
+      callToAction: t('cardCallToAction'),
+    },
+    {
+      image: '/images/carcase.PNG',
+      title: t('cardTitleCarcasesCles'),
+      description: t('cardDescCarcasesCles'),
+      callToAction: t('cardCallToAction'),
+    },
+    {
+      image: '/images/close_windows.webp',
+      title: t('cardTitleWindowClose'),
+      description: t('cardDescWindowClose'),
+      callToAction: t('cardCallToAction'),
+    },
+    {
+      image: '/images/electronic.jpg',
+      title: t('cardTitleUgir'),
+      description: t('cardDescUgir'),
+      callToAction: t('cardCallToAction'),
+    },
     {
       image: '/images/bcmbci.jpg',
       title: t('cardTitleBcmBci'),
@@ -91,12 +131,6 @@ const page = () => {
       description: t('cardDescCrashAirbag'),
       callToAction: t('cardCallToAction'),
     },
-    {
-      image: '/images/camera-surveillance-voiture.jpg',
-      title: t('cardTitleForCamera'),
-      description: t('cardDescForCamera'),
-      callToAction: t('cardCallToAction'),
-    },
 
     {
       image: '/images/centralise.jpg',
@@ -104,17 +138,12 @@ const page = () => {
       description: t('cardDescCentraliseVoiture'),
       callToAction: t('cardCallToAction'),
     },
-
-    {
-      image: '/images/carplay.avif',
-      title: t('cardTitleCarplay'),
-      description: t('cardDescCarplay'),
-      callToAction: t('cardCallToAction'),
-    },
   ];
 
   return (
-    <main className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-6 py-16 space-y-28 max-w-7xl mx-auto font-sans">
+    <>
+      <Breadcrumbs page="nos-services" />
+      <main className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-6 py-16 space-y-28 max-w-7xl mx-auto font-sans">
       <section className="text-center space-y-6">
         <h1 className="text-5xl font-extrabold leading-tight tracking-tight">
           {t('headline')}
@@ -133,9 +162,10 @@ const page = () => {
       <section className="space-y-10">
         <h2 className="text-4xl font-bold text-center">{t('ourServices')}</h2>
       </section>
-      <ServicesCards cards={OurServicesCards} />
-    </main>
+        <ServicesCards cards={OurServicesCards} />
+      </main>
+    </>
   );
 };
 
-export default page;
+export default Page;

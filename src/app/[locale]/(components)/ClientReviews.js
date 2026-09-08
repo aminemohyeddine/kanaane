@@ -16,12 +16,6 @@ export default function ClientReviews() {
       lang: 'ar',
     },
     {
-      text: 'Installation impeccable de CarPlay dans ma voiture. Très satisfait du travail.',
-      name: 'Sophia',
-      location: 'Marrakech',
-      lang: 'fr',
-    },
-    {
       text: 'فريق KANAANE Auto Services قام بتعديل BCM و BCI بنجاح واحترافية.',
       name: 'سامي',
       location: 'الرباط',
@@ -44,10 +38,10 @@ export default function ClientReviews() {
   const t = useTranslations('HomePage');
 
   return (
-    <section className="bg-transparent py-12 px-4" dir="rtl" lang="ar">
-      <h3 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white uppercase font-abchanel">
+    <section className="bg-transparent py-12 px-4" dir="rtl">
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white uppercase font-abchanel">
         {t('reviews.title')}
-      </h3>
+      </h2>
       <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {ClientReviews.map(({ text, name, location, lang }, idx) => (
           <div
@@ -61,21 +55,21 @@ export default function ClientReviews() {
             dir={lang === 'ar' ? 'rtl' : 'ltr'}
             lang={lang}
           >
-            <h4 className="text-gray-700 dark:text-gray-300 mb-6 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm md:text-base leading-relaxed">
               &ldquo;{text}&rdquo;
-            </h4>
-            <h4 className="font-semibold text-gray-900 dark:text-white font-abchanel">
+            </p>
+            <h3 className="font-semibold text-gray-900 dark:text-white font-abchanel">
               {name}
-            </h4>
-            <h4 className="text-sm text-gray-600 dark:text-gray-400 font-abchanel">
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-abchanel">
               {location}
-            </h4>
+            </p>
           </div>
         ))}
       </div>
-      <h3 className="mt-10 text-center text-xs text-gray-500 dark:text-gray-400 font-abchanel">
+      <p className="mt-10 text-center text-xs text-gray-500 dark:text-gray-400 font-abchanel">
         {t('reviews.fromWhatsapp')}
-      </h3>
+      </p>
     </section>
   );
 }

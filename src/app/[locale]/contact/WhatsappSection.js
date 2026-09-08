@@ -31,9 +31,9 @@ const WhatsAppSection = () => {
           </div>
 
           <div className="flex-grow text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white max-w-lg text-center">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white max-w-lg text-center">
               {t('preferWhatsApp')}
-            </h2>
+            </h1>
             <p className="text-lg text-gray-600 mb-6 max-w-lg ">
               {t('chatWithUs')}
             </p>

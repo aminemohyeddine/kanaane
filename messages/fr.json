@@ -3,25 +3,25 @@
     "welcomeText": "Bienvenue chez",
     "nos-services": "Nos Services",
     "title": "KANAANE Auto Services",
-    "servicesTitle": "Découvrez nos services",
-    "servicesIntro": "Chez KANAANE Auto Services, nous proposons des services complets de Diagnostic auto, d’installation d’accessoires (CarPlay, caméras, capteurs), et de distribution de matériel auto pour renforcer la sécurité et le confort de votre véhicule.",
+    "servicesTitle": "Serrurier automobile et diagnostic auto à Casablanca",
+    "servicesIntro": "Serrurier automobile et spécialiste du diagnostic auto à Casablanca : programmation, codage et duplication de clés et de télécommandes, remplacement de clés perdues, ouverture de voiture, diagnostic électronique et antidémarrage, AdBlue, capteurs, BCM/BCI, UGR et accessoires auto.",
     "buttonText": "Voir tous les services",
     "services": {
+      "keyProgramming": {
+        "title": "🔑 Programmation de clés automobiles",
+        "desc": "Codage de clés et de télécommandes, duplication et création de nouvelles clés."
+      },
+      "carOpen": {
+        "title": "🚪 Ouverture de voitures et de serrures",
+        "desc": "Perte de clés ou clé enfermée : ouverture rapide et sans dommage à Casablanca."
+      },
       "keyFix": {
         "title": "🔧 Réparation de clés de voiture",
-        "desc": "Réparation et remise en état des clés endommagées ou défectueuses."
+        "desc": "Réparation des clés et télécommandes endommagées et remplacement de clés perdues."
       },
       "windowClose": {
         "title": "⏫ Fermeture automatique des fenêtres",
         "desc": "Sécurité dès la fermeture de la voiture."
-      },
-      "camera": {
-        "title": "📷 Installation de caméras et capteurs",
-        "desc": "Pour une conduite sûre et un stationnement optimisé."
-      },
-      "carplay": {
-        "title": "🖥️ Écran multimédia avec CarPlay",
-        "desc": "Tableau de bord moderne et connecté."
       },
       "fap": {
         "title": "🛠️ Entretien du filtre à particules (FAP)",
@@ -41,7 +41,7 @@
       },
       "electronicAuto": {
         "title": "🔌 Maintenance électronique automobile",
-        "desc": "Diagnostic et réparation des pannes électroniques diverses."
+        "desc": "Diagnostic électronique automobile, systèmes antidémarrage et pannes diverses."
       },
       "vents": {
         "title": "🌬️ Entretien des bouches d’aération",
@@ -53,7 +53,7 @@
       },
       "carcasesCles": {
         "title": "🔑 Coques de clés de voiture",
-        "desc": "Fourniture de coques de rechange pour clés endommagées."
+        "desc": "Coques de rechange pour clés et télécommandes de voiture endommagées."
       },
       "centraliseVoiture": {
         "title": "🚘 Installation et maintenance du système de centralisation",
@@ -74,7 +74,7 @@
     },
     "AboutUs": {
       "title": "À propos de nous",
-      "content": "Chez Kanaane Auto Services, nous sommes spécialisés dans le diagnostic électronique automobile, la maintenance AdBlue, ainsi que l’installation d’accessoires auto comme CarPlay, UGR et autres systèmes connectés.<br /><br />Nous intervenons également sur les modules électroniques tels que BCM et BCI, assurant la sécurité, la performance et la personnalisation de votre véhicule.<br /><br />En plus de nos services techniques, nous proposons la vente et la distribution de matériel électronique et d’accessoires automobiles adaptés à toutes les marques."
+      "content": "KANAANE Auto Services est votre serrurier automobile à Casablanca, installé à Hay Sadri. Nous assurons la programmation de clés automobiles, le codage de clés et de télécommandes, la duplication de clés de voiture, la création de nouvelles clés, le remplacement de clés perdues ainsi que l’ouverture de voitures, de portes et de serrures en cas de perte de clés.<br /><br />Nous sommes également spécialisés dans le diagnostic automobile et le diagnostic électronique : systèmes antidémarrage, maintenance AdBlue, installation et réglage de capteurs, programmation des modules BCM et BCI, adaptation UGR et UGIR, et installation d’accessoires auto.<br /><br />En plus de nos services techniques, nous proposons la vente et la distribution de matériel électronique et d’accessoires automobiles adaptés à toutes les marques, partout à Casablanca et au Maroc."
     },
     "reviews": {
       "title": "Ce que disent nos clients",
@@ -91,7 +91,7 @@
   },
   "whatsappContact": {
     "messageToSend": "Salut ! J’ai une question concernant vos services",
-    "preferWhatsApp": "Vous préférez WhatsApp ?",
+    "preferWhatsApp": "Contactez votre serrurier automobile à Casablanca",
     "chatWithUs": "Discutez directement avec nous sur WhatsApp pour des réponses rapides à vos questions. Notre équipe est disponible pendant les heures d'ouverture pour vous aider.",
     "chatOnWhatsApp": "Discuter sur WhatsApp",
     "businessHours": "Lun-Sam : 9h-19h",
@@ -117,36 +117,33 @@
     "sending": "Envoi en cours..."
   },
   "locationPage": {
-    "contactAndLocation": "Emplacement & Contact",
+    "contactAndLocation": "Notre atelier à Casablanca — adresse et contact",
     "location": "hay sadri - rue 66 - 20670 - CASABLANCA (à coté de collège ABDELLEH IBN YASSINE)",
     "title": "KANAANE Auto Services"
   },
   "our-services": {
     "ourServices": "NOS SERVICES",
     "contactUs": "Contactez-nous",
-    "headline": "Expertise en Diagnostic auto, installation d’accessoires et distribution de matériel automobile à Casablanca.",
-    "subtext": "Nous réalisons le Diagnostic auto, l’installation d’accessoires auto (comme CarPlay, caméras, capteurs), et la distribution de matériel automobile — tout cela sous un même toit à Casablanca !",
+    "headline": "Serrurerie automobile et diagnostic auto à Casablanca",
+    "subtext": "Programmation de clés automobiles, codage de clés et de télécommandes, duplication, remplacement de clés perdues, ouverture de voitures et de serrures, diagnostic électronique et antidémarrage, AdBlue, capteurs, BCM/BCI, UGR et accessoires auto — tout cela sous un même toit à Casablanca !",
 
-    "cardTitleForProgramming": "Réparation de clés automobiles",
-    "cardDescForProgramming": "Réparation et remise en état des clés abîmées ou défectueuses pour garantir leur bon fonctionnement.",
+    "cardTitleForProgramming": "Programmation de clés automobiles",
+    "cardDescForProgramming": "Programmation et codage de clés et de télécommandes, duplication de clés de voiture et création de nouvelles clés automobiles pour toutes les marques.",
+
+    "cardTitleKeyRepair": "Réparation et remplacement de clés perdues",
+    "cardDescKeyRepair": "Réparation des clés et télécommandes abîmées et remplacement de clés perdues, avec programmation de la nouvelle clé.",
 
     "cardTitleForCarOpen": "Ouverture de voiture en cas de perte ou clé enfermée",
-    "cardDescForCarOpen": "Vous avez verrouillé votre voiture avec la clé à l’intérieur ? Nous intervenons rapidement et sans dommage pour ouvrir votre véhicule.",
+    "cardDescForCarOpen": "Ouverture de voitures, de portes et de serrures en cas de perte de clés ou de clé enfermée : nous intervenons rapidement et sans dommage à Casablanca.",
 
     "cardTitleWindowClose": "Fermeture automatique des vitres après verrouillage",
     "cardDescWindowClose": "Nos systèmes assurent la fermeture automatique des vitres dès que vous verrouillez votre voiture, pour plus de sécurité et de confort.",
-
-    "cardTitleForCamera": "Installation de caméras et détecteurs de distance",
-    "cardDescForCamera": "Installation professionnelle de caméras et capteurs pour une meilleure sécurité et gestion du stationnement.",
-
-    "cardTitleCarplay": "Écran multimédia avec CarPlay",
-    "cardDescCarplay": "Tableau de bord moderne et connecté pour une expérience de conduite améliorée.",
 
     "cardTitleFap": "Entretien du filtre à particules (FAP)",
     "cardDescFap": "Nettoyage et maintenance du filtre à particules pour une performance optimale et moins de pollution.",
 
     "cardTitleUgir": "Adaptation UGR et UGIR",
-    "cardDescUgir": "Ajustement et adaptation des systèmes électroniques spécifiques à votre véhicule.",
+    "cardDescUgir": "Adaptation UGR et UGIR : ajustement des systèmes électroniques et des accessoires auto spécifiques à votre véhicule.",
 
     "cardTitleAdblue": "Entretien du système AdBlue",
     "cardDescAdblue": "Services dédiés à la maintenance du système AdBlue pour réduire les émissions polluantes.",
@@ -155,7 +152,7 @@
     "cardDescCrashAirbag": "Diagnostic et réparation des systèmes de sécurité essentiels pour votre protection.",
 
     "cardTitleElectronicAuto": "Maintenance électronique automobile",
-    "cardDescElectronicAuto": "Diagnostic et réparation des pannes électroniques diverses dans votre véhicule.",
+    "cardDescElectronicAuto": "Diagnostic électronique complet, systèmes antidémarrage et réparation des pannes électroniques de votre véhicule.",
 
     "cardTitleVents": "Entretien des bouches d’aération",
     "cardDescVents": "Nettoyage et réglage du système de ventilation pour plus de confort et une meilleure circulation d’air.",
@@ -164,7 +161,7 @@
     "cardDescBoitierElectroniqueOccasion": "Boîtiers électroniques de qualité, remis à neuf et proposés à des prix compétitifs.",
 
     "cardTitleCarcasesCles": "Coques de clés de voiture",
-    "cardDescCarcasesCles": "Fourniture de coques de remplacement pour vos clés abîmées ou usées.",
+    "cardDescCarcasesCles": "Coques de remplacement pour vos clés et télécommandes de voiture abîmées ou usées, toutes marques.",
 
     "cardTitleCentraliseVoiture": "Installation et maintenance du système de centralisation",
     "cardDescCentraliseVoiture": "Contrôle complet et fiable de l’ouverture et fermeture des portes de votre voiture.",

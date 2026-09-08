@@ -1,28 +1,45 @@
+const SITE_URL = 'https://www.kanaane-auto-services.com';
+const LOCALES = ['fr', 'ar'];
+const PATHS = ['', '/nos-services', '/location', '/contact'];
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.kanaane-auto-services.com',
+  siteUrl: SITE_URL,
   generateRobotsTxt: true,
-  changefreq: 'daily',
-  priority: 0.7,
+  generateIndexSitemap: false,
+  autoLastmod: true,
+  // Locale-prefixed URLs are listed explicitly below; skip whatever Next emits.
+  exclude: ['*'],
   sitemapSize: 5000,
 
-  additionalPaths: async (config) => {
-    const paths = [
-      '/',
-      '/fr',
-      '/ar',
-      '/fr/location',
-      '/ar/location',
-      '/fr/contact',
-      '/ar/contact',
-      '/ar/nos-services',
-      '/fr/nos-services',
-    ];
+  additionalPaths: async () => {
+    const now = new Date().toISOString();
 
-    return paths.map((url) => ({
-      loc: `https://www.kanaane-auto-services.com${url}`,
-      changefreq: 'daily',
-      priority: 0.7,
-    }));
+    return PATHS.flatMap((path) =>
+      LOCALES.map((locale) => ({
+        loc: `${SITE_URL}/${locale}${path}`,
+        changefreq: path === '' ? 'weekly' : 'monthly',
+        priority: path === '' ? 1.0 : 0.8,
+        lastmod: now,
+        // hreflang pairs so Google serves the right language per user.
+        alternateRefs: [
+          ...LOCALES.map((code) => ({
+            href: `${SITE_URL}/${code}${path}`,
+            hreflang: code,
+            hrefIsAbsolute: true,
+          })),
+          {
+            href: `${SITE_URL}/fr${path}`,
+            hreflang: 'x-default',
+            hrefIsAbsolute: true,
+          },
+        ],
+      })),
+    );
+  },
+
+  robotsTxtOptions: {
+    policies: [{ userAgent: '*', allow: '/' }],
+    additionalSitemaps: [`${SITE_URL}/sitemap.xml`],
   },
 };

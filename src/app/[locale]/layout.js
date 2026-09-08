@@ -6,45 +6,51 @@ import { routing } from '@/i18n/routing';
 import { Providers } from './provides';
 import Footer from './(components)/Footer';
 import WhatsAppContact from './(components)/WhatsappContact';
-import Head from 'next/head';
+import StructuredData from './(components)/StructuredData';
+import { SITE_URL, buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }) {
-  const locale = params.locale;
+  const { locale } = await params;
 
   const metadataByLocale = {
     fr: {
       title:
-        'KANAANE Auto Services | Diagnostic auto, installation et distribution d’accessoires auto à Casablanca – Maroc',
+        'Serrurier automobile & diagnostic auto à Casablanca | KANAANE Auto Services',
       description:
-        'KANAANE Auto Services est votre spécialiste à Casablanca pour le Diagnostic auto, l’installation d’accessoires auto, ainsi que la distribution de matériel électronique et d’équipements liés à l’automobile partout au Maroc.',
+        'Serrurier automobile à Casablanca : programmation, codage et duplication de clés et télécommandes, remplacement de clés perdues, ouverture de voiture. Diagnostic automobile, AdBlue, capteurs, BCM/BCI, UGR et accessoires auto. ☎ +212 6 66 18 88 12',
     },
     ar: {
       title:
-        'KANAANE Auto Services | تشخيص السيارات، تركيب وتوزيع لوازم ومعدات السيارات في الدار البيضاء – المغرب',
+        'سروري سيارات وتشخيص إلكتروني في الدار البيضاء | KANAANE Auto Services',
       description:
-        'KANAANE Auto Services | مركز متخصص في تشخيص أعطال السيارات، تركيب لوازم السيارات، وتوزيع المعدات الإلكترونية وملحقات السيارات في الدار البيضاء و جميع أنحاء المغرب.',
+        'سرورية السيارات في الدار البيضاء: برمجة وتكويد ونسخ مفاتيح السيارات وأجهزة التحكم عن بعد، استبدال المفاتيح المفقودة، فتح السيارات. تشخيص إلكتروني، AdBlue، حساسات، BCM/BCI، UGR وإكسسوارات السيارات. ☎ +212 6 66 18 88 12',
     },
   };
 
-  const defaultMetadata = {
-    title:
-      'KANAANE Auto Services | Diagnostic auto, installation et distribution d’accessoires auto à Casablanca – Maroc',
-    description:
-      'KANAANE Auto Services est votre spécialiste à Casablanca pour le Diagnostic auto, l’installation d’accessoires auto, ainsi que la distribution de matériel électronique et d’équipements liés à l’automobile partout au Maroc.',
-  };
+  const meta = metadataByLocale[locale] || metadataByLocale.fr;
 
   return {
-    title: metadataByLocale[locale]?.title || defaultMetadata.title,
-    description:
-      metadataByLocale[locale]?.description || defaultMetadata.description,
+    metadataBase: new URL(SITE_URL),
+    title: meta.title,
+    description: meta.description,
+    applicationName: 'KANAANE Auto Services',
+    alternates: buildAlternates(locale || 'fr', ''),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+      },
+    },
     verification: {
       google: 'N-D8Gig5umJFSNGKlXxTZzg6bn-GhJ3d3WskSWIXKk0',
     },
   };
 }
-// other: {
-//   'google-site-verification': 'jpyBSGudUIKwgRSsQcESr7kIzi5zWaHVw0ZVSYB8cw8',
-// },
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
@@ -54,14 +60,13 @@ export default async function LocaleLayout({ children, params }) {
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="N-D8Gig5umJFSNGKlXxTZzg6bn-GhJ3d3WskSWIXKk0"
-        />{' '}
-      </Head>
+    <html
+      lang={locale}
+      dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      suppressHydrationWarning
+    >
       <body>
+        <StructuredData locale={locale} />
         <NextIntlClientProvider locale={locale}>
           <Providers>
             <WhatsAppContact locale={locale} />
